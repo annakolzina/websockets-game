@@ -1,0 +1,16 @@
+2022-01-10 11:49:06 pid:36661 Workerman[public/server/server.php] start in DEBUG mode
+2022-01-10 11:56:32 pid:36661 Workerman[server.php] stopping ...
+2022-01-10 11:56:32 pid:36661 Workerman[server.php] has been stopped
+2022-01-10 14:43:32 pid:43076 Workerman[test.php] start in DEBUG mode
+2022-01-10 14:44:08 pid:43076 Workerman[test.php] stopping ...
+2022-01-10 14:44:08 pid:43076 Workerman[test.php] has been stopped
+2022-01-10 14:44:28 pid:43089 Workerman[server/server.php] start in DEBUG mode
+2022-01-10 14:52:06 pid:43089 Workerman[server.php] stopping ...
+2022-01-10 14:52:06 pid:43089 Workerman[server.php] has been stopped
+2022-01-10 14:52:08 pid:43216 Workerman[server/server.php] start in DEBUG mode
+2022-01-10 14:52:37 pid:43216 Workerman[server.php] stopping ...
+2022-01-10 14:52:37 pid:43216 Workerman[server.php] has been stopped
+2022-01-10 14:52:38 pid:43231 Workerman[server/server.php] start in DEBUG mode
+2022-01-10 14:56:26 pid:43231 Workerman[server.php] stopping ...
+2022-01-10 14:56:26 pid:43231 Workerman[server.php] has been stopped
+2022-01-10 14:56:27 pid:43456 Workerman[server/server.php] start in DEBUG mode
