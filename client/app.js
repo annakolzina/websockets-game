@@ -1,39 +1,37 @@
 const bodyElement = document.getElementById('wrapper');
-const unit = document.getElementById('unit');
+//const unit = document.getElementById('unit');
+const output = document.querySelector('.output');
+const user_id = $('#id_user').val();
+const color = $('#color').val();
 
-unit.style.backgroundColor = Math.random() < 0.5 ? 'red' : 'green';
+//unit.style.backgroundColor = Math.random() < 0.5 ? 'red' : 'green';
 
 const ws = new WebSocket('ws://www.dnd:2346/client');
 
-bodyElement.addEventListener('keyup', event => {
-   let top = unit.style.top ? unit.style.top : 0;
-    let left = unit.style.left ? unit.style.left : 0;
-    const step = 5;
-
-    if(event.code == 'ArrowUp'){
-        unit.style.top = parseInt(top) - step + 'px';
-    }
-    else if(event.code == 'ArrowDown'){
-        unit.style.top = parseInt(top) + step + 'px';
-    }
-    else if(event.code == 'ArrowLeft'){
-        unit.style.left = parseInt(left) - step + 'px';
-    }
-    else if(event.code == 'ArrowRight'){
-        unit.style.left = parseInt(left) + step + 'px';
-    }
-
-    let positionData = {//пересылается через веб сокеты и остальные клиенты
-       top: unit.style.top,
-       left: unit.style.left
+function getId(id){
+    let Data = {//пересылается через веб сокеты и остальные клиенты
+        id: id,
+        user: user_id,
+        color: color
     };
 
-    ws.send(JSON.stringify(positionData));
-});
+    ws.send(JSON.stringify(Data));
+}
+
 
 ws.onmessage = response => {
-    let positionData = JSON.parse(response.data);
-    console.log(positionData);
-    unit.style.top = positionData.top;
-    unit.style.left = positionData.left;
+    let Data = JSON.parse(response.data);
+    console.log(Data);
+    var el = document.getElementById(Data.id);
+    if(Data.color == 1){
+
+        el.style.background = "url(\'../images/krest.png\')";
+        el.style.backgroundSize = "contain";
+
+    }else{
+
+        el.style.background = "url(\'../images/zero.png\')";
+        el.style.backgroundSize = "contain";
+
+    }
 };
