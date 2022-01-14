@@ -1,3 +1,6 @@
+<?php
+    include "db_connect.php";
+?>
 <html>
 <head>
     <title>Test</title>
@@ -25,34 +28,16 @@
             width: 200px;
             height: 200px;
         }
+        #send{
+            color: #568595;
+        }
     </style>
 </head>
 <body id="wrapper">
-    <?php session_start();?>
-    <?php $_SESSION['user_id'] = rand(1, 10000000);?>
-    <?php
-    $connection = mysqli_connect('127.0.0.1', 'root', 'password', 'test');
-    if (!$connection)
-    {
-        die("Error connect");
-        echo mysqli_error();
-    }
-    $sql = mysqli_query($connection, 'SELECT `user` FROM `users`');
-    $result = mysqli_fetch_array($sql);
-
-    if(empty($result)){
-        $sql = mysqli_query($connection, "INSERT INTO `users` (`user`, `type`) VALUES ('{$_SESSION['user_id']}', '1')");
-        $_SESSION['color'] = 1;
-    } else{
-        $_SESSION['color'] = 0;
-        $sql = mysqli_query($connection, 'DELETE FROM `users`');
-    }
-    ?>
+    <div id="send"></div>
     <input type="text" id="id_user" value='<?=$_SESSION["user_id"]?>' hidden>
     <input type="text" id="color" value='<?=$_SESSION["color"]?>' hidden>
-    <input type="text" placeholder="Введите сообщение" id="input">
-    <button style="background-color: #568595" id="button">Отправить</button>
-    <div class = "output"></div>
+    <input type="text" id="name" value='<?=$_POST['name']?>' hidden>
     <table id="table">
         <tdoby>
             <tr>

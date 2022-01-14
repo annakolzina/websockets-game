@@ -110,3 +110,14 @@
 2022-01-11 16:14:23 pid:26913 Workerman[server.php] stopping ...
 2022-01-11 16:14:23 pid:26913 Workerman[server.php] has been stopped
 2022-01-11 16:15:22 pid:30569 Workerman[server/server.php] start in DEBUG mode
+2022-01-11 17:46:50 pid:30569 Workerman[server.php] stopping ...
+2022-01-11 17:46:50 pid:30569 Workerman[server.php] has been stopped
+2022-01-12 15:14:51 pid:15099 Workerman[server/server.php] start in DEBUG mode
+2022-01-12 16:07:55 pid:15099 Workerman[server.php] stopping ...
+2022-01-12 16:34:04 pid:15101 worker[15101] remains 1 connection(s)
+2022-01-13 14:22:20 pid:3886 Workerman[server/server.php] start in DEBUG mode
+2022-01-13 14:48:23 pid:3886 Workerman[server.php] stopping ...
+2022-01-13 15:59:50 pid:3888 worker[3888] remains 0 connection(s)
+2022-01-13 15:59:50 pid:3886 worker[none:3888] exit with status 65280
+2022-01-13 15:59:50 pid:3886 Workerman[server.php] has been stopped
+2022-01-14 17:18:54 pid:5347 Workerman[server/server.php] start in DEBUG mode
